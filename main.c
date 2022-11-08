@@ -1,7 +1,25 @@
 #include <stdio.h>
 #include <string.h>
-void main(void) {
-char str[30] = "happy C programming";
-printf("문자열 \"%s\"의 길이 : %i", str, strlen(str));
+
+int main(int argc, char *argv[]) {
+
+FILE* fp;
+char str[30];
+fp = fopen("C:\sample.txt", "w");
+	
+printf("input a word:");
+scanf("%s", &str);
+fprintf(fp, "%s\n", str);
+
+printf("input a word:");
+scanf("%s", &str);
+fprintf(fp, "%s\n", str);
+
+printf("input a word:");
+scanf("%s", &str);
+fprintf(fp, "%s\n", str);
+
+
+fclose(fp);
 }
 
